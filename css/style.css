@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box; }
+
+body {
+  font-size: 1.6rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  line-height: 1.6; }
+  body > * {
+    padding: 5rem; }
+
+.container {
+  display: grid;
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  grid-template-rows: min-content 80vh repeat(5, min-content); }
+
+.navbar {
+  background-color: yellow;
+  grid-column: full-start / full-end; }
+
+.header {
+  background-color: red;
+  grid-column: full-start / full-end; }
+
+.tour {
+  background-color: lightblue; }
+
+.accessories {
+  background-color: lightcoral; }
+
+.product {
+  background-color: lightseagreen; }
+
+.testimonial {
+  background-color: magenta; }
+
+.footer {
+  background-color: orangered; }
