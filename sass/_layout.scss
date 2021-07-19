@@ -1,0 +1,30 @@
+.navbar {
+    background-color: yellow;
+    grid-column: full-start / full-end;
+}
+
+.header {
+    background-color: red;
+    grid-column: full-start / full-end;
+
+}
+
+.tour {
+    background-color: lightblue;
+}
+
+.accessories {
+    background-color: lightcoral;
+}
+
+.product {
+    background-color: lightseagreen;
+}
+
+.testimonial {
+    background-color: magenta;
+}
+
+.footer {
+    background-color: orangered;
+}
