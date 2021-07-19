@@ -1,0 +1,33 @@
+.navbar {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    &__list {
+        list-style: none;
+    }
+
+    &__link {
+        text-decoration: none;
+    }
+
+    &__item-1 {
+        grid-column: 2 / 3;
+    }
+
+    &__item-2 {
+
+    }
+    
+    &__item-3 {
+
+    }
+
+    &__item-4 {
+
+    }
+
+    &__item-5 {
+
+    }
+}

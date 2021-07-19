@@ -14,33 +14,48 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   line-height: 1.6; }
-  body > * {
-    padding: 5rem; }
 
 .container {
   display: grid;
   grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 1fr) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
-  grid-template-rows: min-content 80vh repeat(5, min-content); }
+  grid-template-rows: 100vh repeat(4, min-content); }
 
 .navbar {
-  background-color: yellow;
-  grid-column: full-start / full-end; }
+  display: grid;
+  justify-items: center;
+  align-items: center; }
+  .navbar__list {
+    list-style: none; }
+  .navbar__link {
+    text-decoration: none; }
+  .navbar__item-1 {
+    grid-column: 2 / 3; }
+
+.navbar {
+  background-color: #00ff62;
+  display: grid;
+  grid-template-columns: min-content repeat(5, minmax(20rem, 1fr)); }
 
 .header {
   background-color: red;
   grid-column: full-start / full-end; }
 
 .tour {
-  background-color: lightblue; }
+  background-color: lightblue;
+  grid-column: full-start / full-end; }
 
 .accessories {
-  background-color: lightcoral; }
+  background-color: lightcoral;
+  grid-column: full-start / full-end; }
 
 .product {
-  background-color: lightseagreen; }
+  background-color: lightseagreen;
+  grid-column: full-start / full-end; }
 
 .testimonial {
-  background-color: magenta; }
+  background-color: magenta;
+  grid-column: full-start / full-end; }
 
 .footer {
-  background-color: orangered; }
+  background-color: orangered;
+  grid-column: full-start / full-end; }
