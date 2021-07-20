@@ -137,6 +137,9 @@ body {
     grid-template-columns: min-content 1fr;
     align-items: center;
     justify-items: center; }
+  .product__logo {
+    height: 8rem;
+    width: 9rem; }
   .product__heading2 {
     font-size: 2rem;
     text-align: center; }
@@ -162,10 +165,37 @@ body {
     margin-left: 2rem;
     color: #fff;
     padding: 0 2rem; }
+  .product__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1.5rem;
+    margin-top: 3rem; }
 
-.product__container {
-  display: flex; }
+/************ Testimonials ************/
+.testimonial {
+  display: grid;
+  align-items: center;
+  color: #fff; }
+  .testimonial__bg {
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-column-gap: 1rem; }
+  .testimonial__heading {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2; }
+  .testimonial__icon {
+    border-radius: 100%;
+    border: .5rem solid #fff; }
+  .testimonial__paragraph {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    margin-top: 7rem;
+    color: #f9ca24;
+    text-transform: uppercase; }
+  .testimonial__span {
+    text-transform: none; }
 
+/************ Footer ************/
 .navbar {
   background-color: #1BA370;
   display: grid;
@@ -188,12 +218,18 @@ body {
   grid-column: full-start / full-end; }
 
 .testimonial {
-  background-color: magenta;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 10rem;
+  background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.301)), url(../img/bike-3.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 60vh;
+  background-attachment: fixed; }
 
 .footer {
   background-color: orangered;
-  grid-column: full-start / full-end; }
+  grid-column: full-start / full-end;
+  padding: 2rem 5rem; }
 
 .heading1 {
   text-transform: uppercase;
