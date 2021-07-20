@@ -1,0 +1,26 @@
+.heading1 {
+    text-transform: uppercase;
+    font-size: 4rem;
+
+    &--white {
+        color: #fff;
+    }
+
+    &--black {
+        color: rgb(59, 59, 59);
+    }
+
+    &--bold {
+        font-weight: 600;
+    }
+}
+
+.paragraph {
+    line-height: 1.7;
+}
+
+
+.sm-mb {
+    margin-bottom: 1rem;
+}
+

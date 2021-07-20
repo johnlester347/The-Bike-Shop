@@ -1,33 +1,226 @@
+/**** Header *****/
 .navbar {
-    display: grid;
-    justify-items: center;
-    align-items: center;
 
     &__list {
         list-style: none;
+
+        grid-column: 3 / 4;
+
+        display: grid;
+        grid-template-columns: repeat(5, minmax(15rem, 1fr));
+        justify-items: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
     }
 
-    &__link {
+    &__item {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        height: 100%;
+        width: 100%;
+        transition: all .3s;
+
+        &:hover  {
+            background: rgb(255, 255, 255);
+         
+        }
+    }
+
+    &__item:hover &__link {
+        color: #000;
+    }
+
+    &__link:link,
+    &__link:visited {
+        display: inline-block;
         text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #fff;
+
     }
 
-    &__item-1 {
-        grid-column: 2 / 3;
+    &__logo {
+        height: 10rem;
+        width: 12rem;
+        padding: 1rem;
+    }
+}
+
+.block {
+    display: block;
+    width: 100%;
+    height: 1rem;
+    background-color: #fff;
+}
+
+.header {
+    background-image: linear-gradient(rgba(#000, .6), rgba(#000, .6)), url(../img/bike-3.jpg);
+    background-size: cover;
+    background-position: centers;
+
+    &__box {
+        display: grid;
+        grid-template-columns: max-content;
+        grid-template-rows: 1fr 8rem 10rem;
+        justify-items: start;
+        align-items: center;
+        color: #fff;
+        padding: 20rem 5rem 5rem 5rem;
     }
 
-    &__item-2 {
+}
 
+
+.btn {
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    background-color: #1BA370;
+    color: #fff;
+    font-weight: 500;
+    align-self: end;
+    transition: all .2s;
+
+    &:hover {
+        background-color: #00492e;
+    }
+
+    &:active {
+        transform: translateY(-.2rem);
+    }
+}
+
+
+/************ TOUR ************/
+
+.tour {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, max-content));
+    align-items: center;
+    height: 100vh;
+
+    &__bike {
+        // height: 100%;
+        width: 100%;
+    }
+
+    &__about {
+        padding: 0 5rem;
+    }
+
+    &__img {
+        height: 13rem;
+        width: 13rem;
+        margin-top: 2rem;
+        margin-right: 1rem;
+    }
+}
+
+
+/************ ACCESSORIES ************/
+.accessories {
+    padding: 5rem;
+    display: grid;
+    grid-template-columns: 100%;
+
+    &__img1 {
+        width: 80%;
+        justify-self: start;
+        transform: translateY(-6rem);
+    }
+
+    &__img2 {
+        width: 80%;
+        justify-self: end;
+        transform: translateY(-6rem);
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    &__paragraph {
+        text-align: center;
+        font-size: 2.5rem;
+    }
+
+    &__box {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/************ Product ************/
+.product {
+    padding: 5rem;
+
+    &__box1 {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        align-items: center;
+        justify-items: center;
+    }
+
+    &__box2 {
+        // display: grid;
+
+        // grid-template-columns: 20rem;
+        // grid-template-rows: repeat(2, min-content);
+    }
+
+    &__logo {
+
+    }
+
+    &__heading2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    &__price {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    &__label {
+
+    }
+
+    &__box {
+      grid-row: 2 / 4;
     }
     
-    &__item-3 {
-
+    &__bikebox {
+        background-color: rgb(240, 240, 240);
+        width: 100%;
+        // height: 20rem;
+        display: grid;
+        justify-items: center;
+        align-items: center;
+    }
+    &__bike {
+        background-size: cover;
+        background-position: center;
+        width: 100%;
     }
 
-    &__item-4 {
-
+    &__label {
+        background-color: rgb(0, 145, 41);
+        width: 8rem;
+        justify-self: start;
+        margin-left: 2rem;
+        color: #fff;
+        padding: 0 2rem;
     }
 
-    &__item-5 {
+}
 
-    }
+.product__container {
+    display: flex;
+    
 }
