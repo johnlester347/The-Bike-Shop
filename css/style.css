@@ -8,6 +8,9 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box; }
+  @media only screen and (max-width: 68.75em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font-size: 1.6rem;
@@ -30,6 +33,9 @@ body {
   align-items: center;
   width: 100%;
   height: 100%; }
+  @media only screen and (max-width: 56.25em) {
+    .navbar__list {
+      display: none; } }
 
 .navbar__item {
   display: grid;
@@ -54,7 +60,27 @@ body {
 .navbar__logo {
   height: 10rem;
   width: 12rem;
-  padding: 1rem; }
+  padding: 1rem;
+  justify-self: center;
+  align-self: center; }
+  @media only screen and (max-width: 56.25em) {
+    .navbar__logo {
+      margin-left: 2rem; } }
+
+.burger-icon {
+  display: none; }
+  @media only screen and (max-width: 56.25em) {
+    .burger-icon {
+      height: 6rem;
+      width: 6rem;
+      display: block;
+      grid-row: 1 / 2;
+      grid-column: 3 / 4;
+      justify-self: end;
+      align-self: center;
+      padding: 3rem;
+      color: #fff;
+      margin-right: 2rem; } }
 
 .block {
   display: block;
@@ -65,7 +91,7 @@ body {
 .header {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/bike-3.jpg);
   background-size: cover;
-  background-position: centers; }
+  background-position: center; }
   .header__box {
     display: grid;
     grid-template-columns: max-content;
@@ -73,16 +99,26 @@ body {
     justify-items: start;
     align-items: center;
     color: #fff;
-    padding: 20rem 5rem 5rem 5rem; }
+    padding: 5rem 5rem;
+    margin-top: 12rem; }
+    @media only screen and (max-width: 68.75em) {
+      .header__box {
+        grid-template-columns: max-content;
+        margin-top: 21rem; } }
+    @media only screen and (max-width: 46.87em) {
+      .header__box {
+        grid-template-columns: 100%;
+        margin-top: 15rem;
+        line-height: 1.5;
+        grid-row-gap: 5rem; } }
 
 .btn {
-  text-transform: uppercase;
   font-size: 2rem;
-  padding: 1rem 2.5rem;
+  padding: 1.7rem 4rem;
   border: none;
   background-color: #1BA370;
   color: #fff;
-  font-weight: 500;
+  font-weight: 300 !important;
   align-self: end;
   transition: all .2s; }
   .btn:hover {
@@ -96,8 +132,15 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(40rem, max-content));
   align-items: center;
   height: 100vh; }
+  @media only screen and (max-width: 56.25em) {
+    .tour {
+      grid-template-columns: repeat(auto-fit, minmax(50rem, max-content));
+      justify-content: center; } }
   .tour__bike {
     width: 100%; }
+    @media only screen and (max-width: 31.25em) {
+      .tour__bike {
+        width: 70%; } }
   .tour__about {
     padding: 0 5rem; }
   .tour__img {
@@ -105,6 +148,10 @@ body {
     width: 13rem;
     margin-top: 2rem;
     margin-right: 1rem; }
+  @media only screen and (max-width: 31.25em) {
+    .tour__img-box {
+      display: grid;
+      justify-items: center; } }
 
 /************ ACCESSORIES ************/
 .accessories {
@@ -115,38 +162,68 @@ body {
     width: 80%;
     justify-self: start;
     transform: translateY(-6rem); }
+    @media only screen and (max-width: 50em) {
+      .accessories__img1 {
+        transform: translateY(2rem);
+        width: 70rem;
+        justify-self: end; } }
+    @media only screen and (max-width: 43.75em) {
+      .accessories__img1 {
+        width: 60rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .accessories__img1 {
+        width: 50rem; } }
+    @media only screen and (max-width: 25em) {
+      .accessories__img1 {
+        width: 40rem; } }
   .accessories__img2 {
     width: 80%;
     justify-self: end;
     transform: translateY(-6rem); }
+    @media only screen and (max-width: 50em) {
+      .accessories__img2 {
+        display: none; } }
   .accessories__heading {
     text-align: center;
-    font-size: 5rem; }
+    font-size: 5rem;
+    color: #fff; }
   .accessories__paragraph {
     text-align: center;
-    font-size: 2.5rem; }
+    font-size: 2.5rem;
+    color: #fff; }
   .accessories__box {
     display: grid;
     grid-template-columns: 1fr 1fr; }
+    @media only screen and (max-width: 50em) {
+      .accessories__box {
+        grid-template-columns: max-content; } }
 
 /************ Product ************/
 .product {
-  padding: 5rem; }
+  padding: 5rem 5rem 10rem 5rem; }
   .product__box1 {
     display: grid;
     grid-template-columns: min-content 1fr;
     align-items: center;
+    justify-items: center;
+    margin-bottom: 4rem; }
+  .product__box2 {
+    display: grid;
     justify-items: center; }
   .product__logo {
     height: 8rem;
     width: 9rem; }
+  .product__heading {
+    font-size: 4rem; }
   .product__heading2 {
+    margin-top: 1.5rem;
     font-size: 2rem;
     text-align: center; }
   .product__price {
     font-size: 1.5rem;
     text-align: center; }
   .product__box {
+    width: 50%;
     grid-row: 2 / 4; }
   .product__bikebox {
     background-color: #f0f0f0;
@@ -158,6 +235,9 @@ body {
     background-size: cover;
     background-position: center;
     width: 100%; }
+  .product__icon {
+    fill: #f9ca24;
+    height: 4rem; }
   .product__label {
     background-color: #009129;
     width: 8rem;
@@ -167,9 +247,15 @@ body {
     padding: 0 2rem; }
   .product__container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
     grid-column-gap: 1.5rem;
-    margin-top: 3rem; }
+    margin-top: 3rem;
+    grid-row-gap: 2rem; }
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-items: center; }
 
 /************ Testimonials ************/
 .testimonial {
@@ -179,7 +265,7 @@ body {
   .testimonial__bg {
     display: grid;
     grid-template-columns: min-content 1fr;
-    grid-column-gap: 1rem; }
+    grid-column-gap: 4rem; }
   .testimonial__heading {
     grid-column: 2 / 3;
     grid-row: 1 / 2; }
@@ -196,6 +282,33 @@ body {
     text-transform: none; }
 
 /************ Footer ************/
+.footer {
+  display: grid;
+  align-items: center; }
+  .footer__list {
+    list-style: none;
+    height: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, min-content));
+    justify-content: center;
+    align-items: center;
+    grid-row-gap: 3rem; }
+  .footer__item {
+    width: 100%;
+    display: grid;
+    justify-items: end; }
+  .footer__link:link, .footer__link:visited {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    transition: color .3s; }
+    .footer__link:link:hover, .footer__link:visited:hover {
+      color: #1BA370; }
+
 .navbar {
   background-color: #1BA370;
   display: grid;
@@ -208,10 +321,21 @@ body {
   background-color: white;
   grid-column: full-start / full-end;
   padding: 5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .tour {
+      padding: 0 3rem; } }
+  @media only screen and (max-width: 31.25em) {
+    .tour {
+      grid-template-rows: min-content min-content;
+      grid-row-gap: 3rem;
+      align-content: center; } }
 
 .accessories {
   background-color: #1BA370;
   grid-column: full-start / full-end; }
+  @media only screen and (max-width: 50em) {
+    .accessories {
+      justify-items: center; } }
 
 .product {
   background-color: white;
@@ -227,13 +351,16 @@ body {
   background-attachment: fixed; }
 
 .footer {
-  background-color: orangered;
+  background-color: #101D2C;
   grid-column: full-start / full-end;
-  padding: 2rem 5rem; }
+  padding: 8rem 5rem; }
 
 .heading1 {
   text-transform: uppercase;
   font-size: 4rem; }
+  @media only screen and (max-width: 25em) {
+    .heading1 {
+      font-size: 3rem; } }
   .heading1--white {
     color: #fff; }
   .heading1--black {

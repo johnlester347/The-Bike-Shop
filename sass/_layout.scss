@@ -14,11 +14,26 @@
     grid-column: full-start / full-end;
     padding: 5rem;
 
+    @media only screen and (max-width: 37.5em) { // 600px
+        padding: 0 3rem;
+    }
+
+    @media only screen and (max-width: 31.25em) { // 500px
+        grid-template-rows: min-content min-content;
+        grid-row-gap: 3rem;
+        align-content: center;
+    }
+
+
 }
 
 .accessories {
     background-color: #1BA370;
     grid-column: full-start / full-end;
+
+    @media only screen and (max-width: 50em) { //800px
+        justify-items: center;
+    }
 }
 
 .product {
@@ -39,8 +54,8 @@
 }
 
 .footer {
-    background-color: orangered;
+    background-color: #101D2C;
     grid-column: full-start / full-end;
 
-    padding: 2rem 5rem;
+    padding: 8rem 5rem;
 }
