@@ -23,8 +23,6 @@
         grid-row-gap: 3rem;
         align-content: center;
     }
-
-
 }
 
 .accessories {
@@ -44,13 +42,20 @@
 .testimonial {
     grid-column: full-start / full-end;
 
-    padding: 10rem;
-
     background-image: linear-gradient(to right bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.301)), url(../img/bike-3.jpg);
     background-size: cover;
     background-position: center;
     height: 60vh;
     background-attachment: fixed;
+    padding: 10rem;
+
+    @media only screen and (max-width: 56.25em) { // 900px
+        padding: 8rem;
+    }
+
+    @media only screen and (max-width: 25em) { // 900px
+        padding: 5rem;
+    }
 }
 
 .footer {
