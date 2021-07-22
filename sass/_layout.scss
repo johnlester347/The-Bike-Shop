@@ -3,6 +3,7 @@
 
     display: grid;
     grid-template-columns: min-content 10rem 1fr;
+    transition: all .5s;
 }
 
 .header {
