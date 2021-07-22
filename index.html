@@ -14,14 +14,17 @@
 
 <body class="container">
     <header class="header">
+        <!-- Navbar add class show -->
         <nav class="navbar">
             <img src="img/logo.png" alt="logo" class="navbar__logo">
+
+            <!-- Add navbar__list-show -->
             <ul class="navbar__list">
-                <li class="navbar__item"><a href="#" class="navbar__link">Touring Bikes</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Bycicle</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Road Bikes</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Cycle Pumps</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Accessories</a></li>
+                <li class="navbar__item"><a href="#tour" class="navbar__link">Touring Bikes</a></li>
+                <li class="navbar__item"><a href="#bycicle" class="navbar__link">Bycicle</a></li>
+                <li class="navbar__item"><a href="#shop" class="navbar__link">Road Bikes</a></li>
+                <li class="navbar__item"><a href="#shop" class="navbar__link">Cycle Pumps</a></li>
+                <li class="navbar__item"><a href="#bycicle" class="navbar__link">Accessories</a></li>
             </ul>
             <ion-icon name="menu-outline" class="burger-icon"></ion-icon>
         </nav>
@@ -32,11 +35,11 @@
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, ipsam minima? Illo<br>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis amet nam explicabo assumenda!
             </p>
-            <button class="btn">Shop Now</button>
+            <button class="btn"><a href="#shop">Shop Now</a></button>
         </div>
     </header>
 
-    <section class="tour">
+    <section class="tour" id="tour">
         <figure class="tour__img-box">
             <img src="img/bike-5.jpg" alt="Bike model" class="tour__bike">
         </figure>
@@ -50,7 +53,7 @@
         </div>
     </section>
 
-    <section class="accessories">
+    <section class="accessories" id="bycicle">
         <h1 class="accessories__heading">Buy Bycicle Accessories</h1>
         <p class="accessories__paragraph">Top brands. Huge selection. <br> Great Offers. Best Deals.</p>
         <div class="accessories__box">
@@ -59,7 +62,7 @@
         </div>
     </section>
 
-    <section class="product">
+    <section class="product" id="shop">
         <div class="product__box1">
             <img src="img/logo.png" alt="Logo" class="product__logo">
             <h1 class="product__heading">Special Product</h1>

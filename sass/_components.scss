@@ -1,4 +1,13 @@
 /**** Header *****/
+
+.show {
+    display: grid;
+    grid-template-columns: min-content 1fr min-content;
+    grid-template-rows: min-content 200px;
+    justify-items: center;
+}
+
+
 .navbar {
 
     &__list {
@@ -12,11 +21,24 @@
         align-items: center;
         width: 100%;
         height: 100%;
+        transition: all .5s;
 
         @media only screen and (max-width: 56.25em) { // 900px
             display: none;
         }
+
+        &-show {
+            list-style: none;
+            grid-column: 1 / 4;
+            grid-row: 2 / 4;
+            display: flex;
+            width: 50%;
+            height: 100%;
+            flex-direction: column;
+        }
     }
+
+    
 
     &__item {
         display: grid;
@@ -28,7 +50,11 @@
 
         &:hover  {
             background: rgb(255, 255, 255);
-         
+        }
+
+        
+        @media only screen and (max-width: 56.25em) { // 900px
+            margin-bottom: 1rem;
         }
     }
 
@@ -44,6 +70,9 @@
         font-weight: 500;
         color: #fff;
 
+        @media only screen and (max-width: 56.25em) { // 900px
+            padding: 2rem;
+        }
     }
 
     &__logo {
@@ -127,8 +156,13 @@
     align-self: end;
     transition: all .2s;
 
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
+
     &:hover {
-        background-color: #00492e;
+        background-color: #11865b;
     }
 
     &:active {
