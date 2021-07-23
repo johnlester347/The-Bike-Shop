@@ -126,6 +126,12 @@
         color: #fff;
         padding: 5rem 5rem;
         margin-top: 12rem;
+     
+
+
+        & > h1, p {
+            animation: anime .8s ease-in-out;
+        }
 
         @media only screen and (max-width: 68.75em) { // 1100px
             grid-template-columns: max-content;
@@ -143,6 +149,18 @@
 
     }
 
+}
+
+@keyframes anime {
+    0% {
+        opacity: 0;
+        transform: translateX(-3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(.5rem);
+    }
 }
 
 
@@ -166,7 +184,7 @@
     }
 
     &:active {
-        transform: translateY(-.2rem);
+        transform: scale(0.96);
     }
 }
 
