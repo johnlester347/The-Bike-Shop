@@ -123,6 +123,8 @@ body {
     color: #fff;
     padding: 5rem 5rem;
     margin-top: 12rem; }
+    .header__box > h1, .header__box p {
+      animation: anime .8s ease-in-out; }
     @media only screen and (max-width: 68.75em) {
       .header__box {
         grid-template-columns: max-content;
@@ -133,6 +135,14 @@ body {
         margin-top: 15rem;
         line-height: 1.5;
         grid-row-gap: 5rem; } }
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+    transform: translateX(-3rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0.5rem); } }
 
 .btn {
   font-size: 2rem;
@@ -149,7 +159,7 @@ body {
   .btn:hover {
     background-color: #11865b; }
   .btn:active {
-    transform: translateY(-0.2rem); }
+    transform: scale(0.96); }
 
 /************ TOUR ************/
 .tour {
