@@ -5,6 +5,7 @@
     grid-template-columns: min-content 1fr min-content;
     grid-template-rows: min-content 200px;
     justify-items: center;
+    transition: 2s;
 }
 
 
@@ -35,6 +36,7 @@
             width: 50%;
             height: 100%;
             flex-direction: column;
+            transition: 2s;
         }
     }
 
